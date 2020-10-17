@@ -1,44 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <title>JavaScript</title>
 </head>
 <body>
-    <script>
-        let suma;
-        const a= 5;
-        const b = 8;
-        suma = a + b;
-        const name = "Karol"; // lancuch w cudzyslowiu
-        const fname = 'Ala'; // lancuch tez mozna w apostrofach
-        const  input = '<input type="text">';
-        console.log(suma);
-        console.log(input + ' ' + name + ' ' + fname);
-        console.log(Number('2') + Number('10'));
-        let price = new String('100.6');
-        let vat = 0.23;
-        console.log(typeof price);
-        console.log(Number(price) + Number(price * vat));
-        console.log(price === 100.6);
-        if (price instanceof Number) {
-            console.log("price is number");
+<button type="button" onclick="addResult()">Kliknij</button>
+<div id="results">
+</div>
+<script>
+    let suma;
+    const a = 5;
+    const b = 8;
+    suma = a + b;
+    const name = "Karol"; // lancuch w cudzyslowiu
+    const fname = 'Ala'; // lancuch tez mozna w apostrofach
+    const input = '<input type="text">';
+    console.log(suma);
+    console.log(input + ' ' + name + ' ' + fname);
+    console.log(Number('2') + Number('10'));
+    let price = new String('100.6');
+    let vat = 0.23;
+    console.log(typeof price);
+    console.log(Number(price) + Number(price * vat));
+    console.log(price === 100.6);
+    if (price instanceof Number) {
+        console.log("price is number");
+    } else if (price instanceof String) {
+        console.log("price is number");
+    }
+
+    switch (name) {
+        case "Karol":
+            console.log("Hej Karol.");
+            break;
+        case "Ala":
+            console.log("Hej Ala.");
+            break;
+        default:
+            console.log("Hej nieznajomy.")
+
+    }
+
+    function sum(x, y) {  // deklaracja funkcji
+        if (isNaN(Number(x)) || isNaN(Number(y))) {
+            return;
         }
-        else if (price instanceof String) {
-            console.log("price is number");
+        return Number(x) + Number(y);
+    }
+
+    console.log("Wywołania funkcji sum: ")
+    console.log(sum(3, 6));
+    console.log(sum('1', '1'));
+    console.log(sum('a', 'b'));
+    // do zmiennej mozemy przypisywać funkcje
+    let sumator = sum;
+
+    console.log(sumator(4, 8));
+    sumator = function (a, b) {
+        return a - b;
+    }
+
+    console.log(sumator(4, 8));
+    // funkcja strzałkowa - odpowiednik lambdy w Java
+    let diff = (a, b) => a - b;
+
+    console.log(diff(4, 8));
+
+    let car = {
+        model: 'abc',
+        name: ' dfr',
+        power: 240,
+        print: function () {
+            return this.model + " " + this.name + " " + this.power;
+        }
+    };
+    car.model = "A4";
+    car.name = "BMW";
+    console.log(car.print());
+
+    class Car {
+        constructor(cmodel, cname) {
+            this.model = cmodel;
+            this.name = cname;
         }
 
-        switch (name) {
-            case "Karol":
-                console.log("Hej Karol.");
-                break;
-            case "Ala":
-                console.log("Hej Ala.");
-                break;
-            default:
-                console.log("Hej nieznajomy.")
-
+        toString() {
+            return this.name + " " + this.model;
         }
-    </script>
+
+        setModel(model) {
+            this.model = model;
+        }
+    }
+
+    let myCar = new Car("500", "Fiat");
+    console.log(myCar.toString());
+    console.log(myCar["model"]);
+    // sprawdzenie czy istnieje właściwość obiektu
+    console.log(myCar.hasOwnProperty("model"));
+
+    // deklaracja tablicy pustej
+    let arr = [];
+    let cars = ["Fiat", "Audi", "BMW"];
+    cars.push("Volvo"); // dodawanie elementu na końcu
+
+    cars.unshift("Jaguar"); // dodawanie elementu na początek
+
+    // tradycyjna pętla for
+    for (let i = 0; i < cars.length; i++) {
+        console.log(cars[i]);
+    }
+    // usunięcie z końca
+    console.log("POP" + cars.pop());
+
+    // usunięcie z początku
+    console.log("SHIFT" + cars.shift());
+
+    // pętla forech
+    for (car of cars) {
+        console.log(car);
+    }
+
+    // petla forich z indeksami
+    for (index in car) {
+        console.log(index + ". " + cars[index]);
+    }
+
+    // foreach na tablicy
+    cars.forEach(item => console.log(item));
+    // tradycyjna funkcja równoważna z funkcją zwrotną - callback
+    cars.forEach(function (item, index) {
+        console.log((index + 1) + ". " + item);
+    })
+
+    function addResult() {
+       const divResults = document.getElementById("results");
+       divResults.innerHTML += '<p>Akapit</p>';
+
+    }
+
+</script>
 </body>
 </html>
