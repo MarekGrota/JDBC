@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ćwiczenie 1</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="https://www.freecodecamp.org/">FreeCodeCamp</a>
+            <a href="https://www.w3schools.com/">W3Schools</a>
+            <a href="https://www.javappa.com/">JavAPPa</a>
+        </nav>
+    </header>
+    <main>
+        <article class="with-red-font-color">
+            <h1>Kurs HTML</h1>
+            <!-- komentarz -->
+            <section>
+                <h2>Znaczniki semantyczne</h2>
+                <p>Do znaczników semantycznych należą:
+                h1, h2, h3,<br> p, a
+                </p>
+            </section>
+            <section>
+                <h2>Przykłady list </h2>
+                <h3> Lista numerowana</h3>
+                <ol class=" colored-lines">
+                    <li>Adam</li>
+                    <li>Karol</li>
+                    <li>Małgorzata</li>
+                    <li>Tadzik</li>
+                </ol>
+                <h3>Lista wypunktowana</h3>
+                <ul>
+                    <li>Adam</li>
+                    <li>Karol</li>
+                    <li>Małgorzata</li>
+                </ul>
+            </section>
+            <section>
+                <h2 id="div-section"> Element typu div</h2>
+                <div>
+                    <h3> Nagłówek wewnątrz div</h3>
+                    <p>Tekst wewnątrz <span>div</span></p>
+                    <img src="https://logos-download.com/wp-content/uploads/2016/10/Java_logo_icon.png"
+                    width="400px"
+                    alt="Logo Java"
+                    > Tekst
+                    <section>
+                        <p>Ten paragraf nie jest bezpośrednim dzieckiem elementu div</p>
+                    </section>
+                </div>
+                <p>Paragraf bezposrednio za elementem div</p>
+                <p class="my-class">Następny paragraf</p>
+            </section>
+            <section>
+                <h2>Przykłądy tabel</h2>
+                <table>
+                    <tr>
+                        <td>Nr</td>
+                        <td>Imię</td>
+                        <td>Nazwisko</td>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Jan</td>
+                        <td>Nowak</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Ewa</td>
+                        <td>Nowak</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Lista obecności</td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Nr</th>
+                        <th>Imię</th>
+                        <th>Nazwisko</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>100.</td>
+                            <td>Karol</td>
+                            <td>Ącki</td>
+                        </tr>
+                        <tr>
+                            <td>200.</td>
+                            <td>Kamil</td>
+                            <td>Kącki</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Liczba obecnych</td>
+                            <td>2</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+            <section>
+                <h2>Przykład wykorzystania znaczników semantycznych liniowych</h2>
+                <p>Kod programu:</p>
+                <pre>
+                <code>
+                    public static void main(String[] args) {
+                        SpringApplication.run(SpringQuizApp.class, args);
+                    }
+                </code>
+                </pre>
+                <p>Uruchomienie programu - naciśnij klawisze <kbd>Shift + F10</kbd></p>
+                <p>Zmienna <var>a</var> wynosi 10</p>
+            </section>
+        </article>
+        <div class="squere basic">
+
+        </div>
+        <div class="squere darker">
+
+        </div>
+        <div class="squere lighter">
+
+        </div>
+        <div class="squere-50 basic">
+            cbdfgnefgn
+        </div>
+    </main>
+</body>
+</html>

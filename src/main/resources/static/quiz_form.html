@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz quiz'u</title>
+    <link rel="stylesheet" href="./quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="quiz-form">
+    <h1 style="color: darkgreen">Dodaj nowe pytanie do quiz'u</h1>
+    <form method="post" style="color: blue">
+        <label for="qbody">Treść pytania</label>
+        <textarea id="qbody" name="body" placeholder="Wpisz treść pytania" rows="5">
+            </textarea>
+        <fieldset>
+            <label for="option1">Opcja odpowiedzi nr 1</label>
+            <input id="option1" name="option1" type="text">
+            <label for="option2">Opcja odpowiedzi nr 2</label>
+            <input id="option2" name="option2" type="text">
+            <label for="option3">Opcja odpowiedzi nr 3</label>
+            <input id="option3" name="option3" type="text">
+            <label for="option4">Opcja odpowiedzi nr 4</label>
+            <input id="option4" name="option4" type="text">
+        </fieldset>
+        <label for="validOption">Numer poprawnej opcji</label>
+        <select name="validOption" id="validOption">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+        <label for="points">Punkt za poprawną odpowiedź</label>
+        <input id="points" name="points" type="number" min="1" max="10" step="1">
+        <input type="submit" value="Prześlij">
+    </form>
+    <div/>
+</body>
+</html>

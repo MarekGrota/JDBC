@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        let suma;
+        const a= 5;
+        const b = 8;
+        suma = a + b;
+        const name = "Karol"; // lancuch w cudzyslowiu
+        const fname = 'Ala'; // lancuch tez mozna w apostrofach
+        const  input = '<input type="text">';
+        console.log(suma);
+        console.log(input + ' ' + name + ' ' + fname);
+        console.log(Number('2') + Number('10'));
+        let price = new String('100.6');
+        let vat = 0.23;
+        console.log(typeof price);
+        console.log(Number(price) + Number(price * vat));
+        console.log(price === 100.6);
+        if (price instanceof Number) {
+            console.log("price is number");
+        }
+        else if (price instanceof String) {
+            console.log("price is number");
+        }
+
+        switch (name) {
+            case "Karol":
+                console.log("Hej Karol.");
+                break;
+            case "Ala":
+                console.log("Hej Ala.");
+                break;
+            default:
+                console.log("Hej nieznajomy.")
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularze</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Formularz</h1>
+    <form method="post" action="ex1.html">
+        <label for="login">Login</label>
+        <input id="login" type="text" name="login" placeholder="wpisz swój login"><br>
+        <label for="password">Hasło</label>
+        <input id="password" type="password" name="password" placeholder="wpisz swoje hasło"><br>
+        <br>
+        <input type="submit" value="Zaloguj"><br><br>
+        <button type="reset">Wyczyść formularz</button>
+    </form>
+    <h1>Formularz preferencji</h1>
+    <form>
+        <fieldset>
+            Imię: <input type="text" name="firstName"><br>
+            email: <input type="email" name="email"><br>
+            data urodzin: <input type="date" name="birthDate"><br>
+        </fieldset>
+        <fieldset>
+            Ulubony kolor:
+            <select name="fcolor"><br>
+                <option value="Red">Czerwony</option>
+                <option value="Green">Zielony</option>
+                <option value="Blue">Niebieski</option>
+                <option value="Yellow">Żółty</option>
+            </select>
+            Ulubione zwierzęta:
+            <select name="fanimal" multiple><br>
+                <option value="Dog">Pies</option>
+                <option value="Cat">Cat</option>
+                <option value="Hamster">Chomik</option>
+                <option value="Papug">Papuga</option>
+            </select>
+            <br>
+            Ulubione imię: <br>
+            <input type="text" name="fname" list="fnames">
+            <datalist id="fnames">
+                <option>Marek</option>
+                <option>Ewa</option>
+                <option>Karol</option>
+            </datalist>
+        </fieldset>
+        <input type="submit" value="Zapisz">
+    </form>
+</body>
+</html>

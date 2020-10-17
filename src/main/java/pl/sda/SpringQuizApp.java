@@ -31,6 +31,7 @@ public class SpringQuizApp implements CommandLineRunner {
     }
 
     public static void main(String[] args) {
+
         SpringApplication.run(SpringQuizApp.class, args);
     }
 

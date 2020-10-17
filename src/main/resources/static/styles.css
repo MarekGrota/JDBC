@@ -1,0 +1,87 @@
+body{
+    font-family: Arial, serif;
+    color: #2787ba;
+    font-size: 18px;
+}
+
+h1, h2{
+    color: darkviolet;
+}
+
+.with-red-font-color{
+    color: red;
+}
+#div-section{
+    color: lawngreen;
+}
+
+div p{
+    color: darkblue;
+}
+
+div >p {
+    color: aqua;
+}
+
+div+ p{
+    color: cornflowerblue;
+}
+
+#selected-paragraph{
+    color: yellow;
+}
+.my-class{
+    color: red;
+}
+
+.colored-lines :nth-child(odd){
+    background-color: yellow;
+}
+
+.colored-lines :nth-child(even){
+    background-color: aqua;
+}
+a:visited{
+    color: black;
+}
+
+a:hover{
+    background-color: wheat;
+}
+
+input:invalid{
+    color: red;
+}
+
+.squere{
+    width: 11rem;
+    height: 11rem;
+}
+
+.basic{
+    background-color: hsl(100,100%,40%);
+}
+.darker{
+    background-color: hsl(100,100%,10%);
+}
+
+.lighter{
+    background-color: hsl(100,100%,90%);
+}
+
+.squere-50{
+    width: 20%;
+    height: 50%;
+}
+
+@media all and (max-width: 600px) {
+    body {
+        background-color: yellow;
+    }
+}
+
+@media all and (min-width: 600px){
+    body {
+        background-color: wheat;
+    }
+}
