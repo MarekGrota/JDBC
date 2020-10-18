@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+</head>
+<body>
+    <div id=""question>
+
+
+    </div>
+<script>
+    fetch("http://localhost:8080/questions/1")
+        .then(respons => respons.json())
+        .then(respons => {
+            let div = document.getElementById("question");
+            div.innerHTML = `<p>${response.body}</p>`;
+        })
+</script>
+</body>
+</html>
